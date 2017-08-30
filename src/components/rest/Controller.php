@@ -268,7 +268,7 @@ class Controller extends \yii\rest\Controller
         $actions = parent::actions();
 
         $actions['index'] = [
-            'class' => 'shcherbanich\apps_money\components\rest\actions\IndexAction',
+            'class' => 'shcherbanich\bitstake\components\rest\actions\IndexAction',
             'modelClass' => $this->modelClass,
             'conditions' => $this->conditions,
             'prepareDataProvider' => [$this, 'prepareDataProvider'],
@@ -277,7 +277,7 @@ class Controller extends \yii\rest\Controller
         ];
 
         $actions['create'] = [
-            'class' => 'shcherbanich\apps_money\components\rest\actions\CreateAction',
+            'class' => 'shcherbanich\bitstake\components\rest\actions\CreateAction',
             'modelClass' => $this->modelClass,
             'conditions' => $this->conditions,
             'checkAccess' => [$this, 'checkAccess'],
@@ -285,7 +285,7 @@ class Controller extends \yii\rest\Controller
         ];
 
         $actions['update'] = [
-            'class' => 'shcherbanich\apps_money\components\rest\actions\UpdateAction',
+            'class' => 'shcherbanich\bitstake\components\rest\actions\UpdateAction',
             'modelClass' => $this->modelClass,
             'conditions' => $this->conditions,
             'findModel' => [$this, 'findModel'],
@@ -294,7 +294,7 @@ class Controller extends \yii\rest\Controller
         ];
 
         $actions['view'] = [
-            'class' => 'shcherbanich\apps_money\components\rest\actions\ViewAction',
+            'class' => 'shcherbanich\bitstake\components\rest\actions\ViewAction',
             'modelClass' => $this->modelClass,
             'checkAccess' => [$this, 'checkAccess'],
             'findModel' => [$this, 'findModel'],
@@ -302,7 +302,7 @@ class Controller extends \yii\rest\Controller
         ];
 
         $actions['delete'] = [
-            'class' => 'shcherbanich\apps_money\components\rest\actions\DeleteAction',
+            'class' => 'shcherbanich\bitstake\components\rest\actions\DeleteAction',
             'modelClass' => $this->modelClass,
             'checkAccess' => [$this, 'checkAccess'],
             'findModel' => [$this, 'findModel'],
@@ -314,14 +314,14 @@ class Controller extends \yii\rest\Controller
         ];
 
         $actions['delete-all'] = [
-            'class' => 'shcherbanich\apps_money\components\rest\actions\DeleteAllAction',
+            'class' => 'shcherbanich\bitstake\components\rest\actions\DeleteAllAction',
             'modelClass' => $this->modelClass,
             'prepareQuery' => [$this, 'prepareQuery'],
             'checkAccess' => [$this, 'checkAccess']
         ];
 
         $actions['update-all'] = [
-            'class' => 'shcherbanich\apps_money\components\rest\actions\UpdateAllAction',
+            'class' => 'shcherbanich\bitstake\components\rest\actions\UpdateAllAction',
             'modelClass' => $this->modelClass,
             'serializer' => $this->serializer,
             'prepareDataProvider' => [$this, 'prepareDataProvider'],
