@@ -18,6 +18,25 @@ class Text
     }
 
     /**
+     * Развертывание текста
+     *
+     * @param string $compressedText
+     *
+     * @return string $text
+     */
+    public static function uncompress($compressedText)
+    {
+
+        try {
+
+            return gzuncompress(base64_decode($compressedText, 9));
+
+        } catch (\Exception $e) {}
+
+        return '';
+    }
+
+    /**
      * Транслитерация текста
      *
      * @param string $str
